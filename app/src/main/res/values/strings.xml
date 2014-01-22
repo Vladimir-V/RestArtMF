@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">RestWaiter</string>
+    <string name="main_activity">Main Activity</string>
+    <string name="action_settings">Settings</string>
+
+</resources>

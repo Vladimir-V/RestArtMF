@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="route" type="Request"/>
+
+    <xs:complexType name="Request">
+        <xs:sequence>
+            <xs:element name="work" type="xs:int" />
+            <xs:element name="name" type="xs:string" />
+            <xs:element name="Actions" type="Actions" />
+        </xs:sequence>
+
+
+        <!--<xs:attribute name="work" type="xs:int" />-->
+        <!--<xs:attribute name="name" type="xs:string" />-->
+    </xs:complexType>
+
+    <xs:complexType name="Update">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string" />
+            <xs:element name="clear" type="xs:int" />
+            <xs:element name="update" type="xs:int" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Actions">
+        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="Update" type="Update" nillable="true" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
